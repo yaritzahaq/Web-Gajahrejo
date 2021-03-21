@@ -528,7 +528,7 @@ function tambahArtikel($data)
     global $conn;
     // htmlspecialchars digunakan untuk mengubah inputan menjadi string
     $judul = htmlspecialchars($data["judul"]);
-    $isi = htmlspecialchars($data["isi"]);
+    $isi = ($data["isi"]);
     $hari_ini = date('Y-m-d');
 
     // upload gambar
@@ -555,7 +555,7 @@ function upload()
     // cek apakah tidak ada gambar yang diupload
     if ($error === 4) {
         echo "<script>
-            alert('pilih gambar hoe');
+            alert('pilih gambar');
         </script>";
         return false;
     }
@@ -571,7 +571,7 @@ function upload()
     // jika benar menghasilkan true dan sebaliknya
     if (!in_array($ekstensiGambar, $ekstensiGambarValid)) {
         echo "<script>
-            alert('Ojok ngawur kon, uduk gambar kui');
+            alert('Kesalahan');
         </script>";
         return false;
     }
@@ -580,7 +580,7 @@ function upload()
     // dalam byte
     if ($ukuranFile > 1000000) {
         echo "<script>
-            alert('Ukuranmu gambar gedi tenan cak');
+            alert('Ukuran Gambar Terlalu Besar');
         </script>";
         return false;
     }
@@ -724,6 +724,141 @@ function hapusKritik($id)
 function cariKritik($keyword)
 {
     $query = "SELECT * FROM kritik WHERE nama LIKE '%$keyword%' OR kritik_saran LIKE '%$keyword%'";
+
+    return query($query);
+}
+
+function tambahWisata($data)
+{
+    global $conn;
+    // htmlspecialchars digunakan untuk mengubah inputan menjadi string
+    $nama = htmlspecialchars($data["nama"]);
+    $link = htmlspecialchars($data["link"]);
+
+    // upload gambar
+    $gambar = upload();
+    if (!$gambar) {
+        return false;
+    }
+    // query sql
+    $query = "INSERT INTO wisata VALUES ('','$nama','$link','$gambar')";
+    mysqli_query($conn, $query);
+    // mengembalikan nilai perubahan data (1 = berhasil) (-1 = gagal)
+    return mysqli_affected_rows($conn);
+}
+
+function hapusWisata($id)
+{
+    global $conn;
+    mysqli_query($conn, "DELETE FROM wisata WHERE id = $id");
+    return mysqli_affected_rows($conn);
+}
+
+function cariWisata($keyword)
+{
+    $query = "SELECT * FROM wisata WHERE nama LIKE '%$keyword%'";
+
+    return query($query);
+}
+
+function tambahPengurus($data)
+{
+    global $conn;
+    // htmlspecialchars digunakan untuk mengubah inputan menjadi string
+    $nama = htmlspecialchars($data["nama"]);
+    $tahun = htmlspecialchars($data["tahun"]);
+    $nosk = htmlspecialchars($data["nosk"]);
+    $jabatan = htmlspecialchars($data["jabatan"]);
+
+    // upload gambar
+    $gambar = upload();
+    if (!$gambar) {
+        return false;
+    }
+
+    // query sql
+    $query = "INSERT INTO pengurus VALUES ('','$nama','$tahun','$nosk','$jabatan','$gambar')";
+    mysqli_query($conn, $query);
+    // mengembalikan nilai perubahan data (1 = berhasil) (-1 = gagal)
+    return mysqli_affected_rows($conn);
+}
+
+function hapusPengurus($id)
+{
+    global $conn;
+    mysqli_query($conn, "DELETE FROM pengurus WHERE id = $id");
+    return mysqli_affected_rows($conn);
+}
+
+function cariPengurus($keyword)
+{
+    $query = "SELECT * FROM pengurus WHERE nama LIKE '%$keyword%'";
+
+    return query($query);
+}
+
+function tambahPotensi($data)
+{
+    global $conn;
+    // htmlspecialchars digunakan untuk mengubah inputan menjadi string
+    $nama = htmlspecialchars($data["nama"]);
+    $keterangan = ($data["keterangan"]);
+    
+    // upload gambar
+    $gambar = upload();
+    if (!$gambar) {
+        return false;
+    }
+    // query sql
+    $query = "INSERT INTO potensi VALUES ('','$nama','$keterangan','$gambar')";
+    mysqli_query($conn, $query);
+    // mengembalikan nilai perubahan data (1 = berhasil) (-1 = gagal)
+    return mysqli_affected_rows($conn);
+}
+
+function hapusPotensi($id)
+{
+    global $conn;
+    mysqli_query($conn, "DELETE FROM potensi WHERE id = $id");
+    return mysqli_affected_rows($conn);
+}
+
+function cariPotensi($keyword)
+{
+    $query = "SELECT * FROM potensi WHERE nama LIKE '%$keyword%'";
+
+    return query($query);
+}
+
+function tambahProduk($data)
+{
+    global $conn;
+    // htmlspecialchars digunakan untuk mengubah inputan menjadi string
+    $nama = htmlspecialchars($data["nama"]);
+    $keterangan = ($data["keterangan"]);
+    
+    // upload gambar
+    $gambar = upload();
+    if (!$gambar) {
+        return false;
+    }
+    // query sql
+    $query = "INSERT INTO produk VALUES ('','$nama','$keterangan','$gambar')";
+    mysqli_query($conn, $query);
+    // mengembalikan nilai perubahan data (1 = berhasil) (-1 = gagal)
+    return mysqli_affected_rows($conn);
+}
+
+function hapusProduk($id)
+{
+    global $conn;
+    mysqli_query($conn, "DELETE FROM produk WHERE id = $id");
+    return mysqli_affected_rows($conn);
+}
+
+function cariProduk($keyword)
+{
+    $query = "SELECT * FROM produk WHERE nama LIKE '%$keyword%'";
 
     return query($query);
 }

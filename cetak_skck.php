@@ -28,10 +28,10 @@ foreach ($skck as $row)
             <td><h4>PEMERINTAH KABUPATEN MALANG</h4></td>
         </tr>
         <tr>
-            <td><h4>PEMERINTAH KECAMATAN TRENGGALEK</h4></td>
+            <td><h4>PEMERINTAH KECAMATAN GEDANGAN</h4></td>
         </tr>
         <tr>
-            <td><h2>KEPALA DESA AING</h2></td>
+            <td><h2>KEPALA DESA GAJAHREJO</h2></td>
         </tr>
     </table>
     <hr style="height: 4px; color: black">
@@ -50,19 +50,19 @@ foreach ($skck as $row)
             <td style="color: white"><li></li></td>
             <td>Nama Lengkap</td>
             <td>:</td>
-            <td>VISHNU ADISAKA</td>
+            <td>SISWOYO</td>
         </tr>
         <tr>
             <td style="color: white"><li></li></td>
             <td>Jabatan</td>
             <td>:</td>
-            <td>Kepala Desa Aing</td>
+            <td>Kepala Desa Gajahrejo</td>
         </tr>
         <tr>
             <td style="color: white"><li></li></td>
             <td>Alamat</td>
             <td>:</td>
-            <td>RT 01 / RW 001 Desa Aing, Kec. Trenggalek</td>
+            <td>RT    / RW     Desa Gajahrejo, Kec. Gedangan</td>
         </tr>
     </ol>
 </table>
@@ -148,13 +148,13 @@ foreach ($skck as $row)
     <table width=100%>
         <tr>
             <td width= 50%; style="padding-left: 100px;">Tanda tangan Pemegang</td>
-            <td align="right" style="padding-right: 100px; ">Kepala Desa Aing </td>
+            <td align="right" style="padding-right: 100px; ">Kepala Desa Gajahrejo </td>
         </tr>
     </table><br><br><br><br>
     <table width=100%>
         <tr>
             <td width= 50%; style="padding-left: 100px; font-weight: bold;">(' . $row["nama"] . ' )</td>
-            <td align="right" style="padding-right: 70px; font-weight: bold;">( Vishnu Adisaka)</td>
+            <td align="right" style="padding-right: 70px; font-weight: bold;">( Siswoyo)</td>
         </tr>
     </table>
     <table width=100%>
@@ -165,8 +165,8 @@ foreach ($skck as $row)
     </table>
     <table width=100%>
         <tr>
-            <td width= 50%; style="padding-left: 100px;">Danramil Aing</td>
-            <td align="right" style="padding-right: 70px;">Camat Trenggalek</td>
+            <td width= 50%; style="padding-left: 100px;">Danramil Gajahrejo</td>
+            <td align="right" style="padding-right: 70px;">Camat Gedangan</td>
         </tr>
     </table><br><br><br><br>
     <table width=100%>

@@ -37,7 +37,7 @@
                             <a class="nav-link" href="?page=kegiatan">Kegiatan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="?page=info">Info</a>
+                            <a class="nav-link" href="?page=info">Profil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="?page=pengurus">Pengurus</a>

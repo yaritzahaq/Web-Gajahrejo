@@ -28,10 +28,10 @@ foreach ($usaha as $row)
             <td><h4>PEMERINTAH KABUPATEN MALANG</h4></td>
         </tr>
         <tr>
-            <td><h4>PEMERINTAH KECAMATAN TRENGGALEK</h4></td>
+            <td><h4>PEMERINTAH KECAMATAN GEDANGAN</h4></td>
         </tr>
         <tr>
-            <td><h2>KEPALA DESA AING</h2></td>
+            <td><h2>KEPALA DESA GAJAHREJO</h2></td>
         </tr>
     </table>
     <hr style="height: 4px; color: black">
@@ -45,7 +45,7 @@ foreach ($usaha as $row)
     </table>
     <div class="container" style="text-align: center;">
        
-    <p style="text-align: justify;">Yang bertanda tangan dibawah ini, Kepala Desa Aing, Kecamatan Trenggalek Kabupaten Malang, dengan ini menerangkan bahwa : </p>
+    <p style="text-align: justify;">Yang bertanda tangan dibawah ini, Kepala Desa Gajahrejo, Kecamatan Gedangan Kabupaten Malang, dengan ini menerangkan bahwa : </p>
     <table style="margin-left: 50px;">
         <ol>
             <tr>
@@ -87,7 +87,7 @@ foreach ($usaha as $row)
     </table>
     <p style="text-align: justify;">adalah benar benar penduduk yang berdomisili di Desa ' . $row["desa"] . ', Kecamatan ' . $row["kecamatan"] . ', Kabupaten ' . $row["kabupaten"] . '.</p>
     
-    <p style="text-align: justify;">Berdasarkan pengamatan yang telah kami lakukan memang benar yang bersangkutan mempunyai usaha ' . $row["jenis_usaha"] . ' dengan nama ' . $row["nama_usaha"] . ' di wilayah Desa Aing.</p>
+    <p style="text-align: justify;">Berdasarkan pengamatan yang telah kami lakukan memang benar yang bersangkutan mempunyai usaha ' . $row["jenis_usaha"] . ' dengan nama ' . $row["nama_usaha"] . ' di wilayah Desa Gajahrejo.</p>
 
     <p style="text-align: justify;">Adapun Surat Keterangan Usaha ini dibuat guna ' . $row["keperluan"] . ' .</p>
 
@@ -97,7 +97,7 @@ foreach ($usaha as $row)
         <tr>
             <td>Dikeluarkan di</td>
             <td>:</td>
-            <td>Aing</td>
+            <td>Gajahrejo</td>
         </tr>
         <tr>
             <td>Pada tanggal</td>
@@ -107,15 +107,15 @@ foreach ($usaha as $row)
     </table><br>
     <table>
         <tr>
-            <td>Kepala Desa Aing</td>
+            <td>Kepala Desa Gajahrejo</td>
         </tr>
         <tr>
-            <td>Kecamatan Trenggalek, Malang</td>
+            <td>Kecamatan Gedangan, Malang</td>
         </tr>
     </table><br><br><br>
     <table>
         <tr>
-            <td><p>Vishnu Adisaka</p></td>
+            <td><p>Siswoyo</p></td>
         </tr>
     </table>
 </body>

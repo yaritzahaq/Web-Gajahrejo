@@ -65,8 +65,12 @@ if (!isset($_SESSION['session_username'])) {
                                 <a class="dropdown-item" href="?halaman=info1">Daftar Info</a>
                                 <a class="dropdown-item" href="?halaman=kegiatan">Buat Kegiatan</a>
                                 <a class="dropdown-item" href="?halaman=kegiatan1">Daftar Kegiatan</a>
-                                <a class="dropdown-item" href="?halaman=wisata">Buat WIsata</a>
+                                <a class="dropdown-item" href="?halaman=wisata">Buat Wisata</a>
                                 <a class="dropdown-item" href="?halaman=wisata1">Daftar Wisata</a>
+                                <a class="dropdown-item" href="?halaman=produk">Buat Produk</a>
+                                <a class="dropdown-item" href="?halaman=produk1">Daftar Produk</a>
+                                <a class="dropdown-item" href="?halaman=potensi">Buat Potensi</a>
+                                <a class="dropdown-item" href="?halaman=potensi1">Daftar Potensi</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -149,7 +153,15 @@ if (!isset($_SESSION['session_username'])) {
         include "p_wisata.php";
     } elseif ($halaman == "wisata1") {
         include "tampil_wisata.php";
-    } else {
+    } elseif ($halaman == "potensi1") {
+        include "tampil_potensi.php";
+    } elseif ($halaman == "potensi") {
+        include "p_potensi.php";
+    } elseif ($halaman == "produk1") {
+        include "tampil_produk.php";
+    } elseif ($halaman == "produk") {
+        include "p_produk.php";
+    }else {
         echo "Halaman Tidak Ditemukan";
     }
     ?>

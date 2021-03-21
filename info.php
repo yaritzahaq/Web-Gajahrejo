@@ -22,7 +22,7 @@ $info = query("SELECT * FROM info");
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
-                        <h1 class="pt-5"><span>Info Tata Cara pembuatan Surat surat</span></h1>
+                        <h1 class="pt-5"><span>Profil Desa Gajahrejo</span></h1>
                     </div>
                 </div>
             </div>

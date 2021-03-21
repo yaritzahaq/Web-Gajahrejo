@@ -3,14 +3,12 @@ require 'functions.php';
 
 $id = $_GET["id"];
 
-$artikel = query("SELECT * FROM artikel WHERE id = $id");
-
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Artikel</title>
+    <title>Monografi Desa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:400,700" rel="stylesheet">
@@ -44,31 +42,11 @@ $artikel = query("SELECT * FROM artikel WHERE id = $id");
 <body>
     <div class="background">
         <div class="logo">
-                <h1>BERITA DESA</h1>
+                <h1>MONOGRAFI DESA</h1>
         </div>
     </div>
 
-    <?php foreach ($artikel as $row) : ?>
-        <!-- <div class="backgroundd"> -->
-        <div class="container">
-            <div class="wrap">
-                <div class="header align-content-stretch">
-                    <h1 class="text-center"><?= $row["judul"]; ?></h1>
-                    <h5 class="text-center">BERITA HARIAN DESA, <?= tgl_indo($row["tanggal"]); ?></h5>
-                </div>
-                <div class="menu text-center">
-                    <div class="halo">
-                        <img src="img/<?= $row["gambar"]; ?>" alt="">
-                    </div>
-                </div>
-                <div class="badan">
-                    <?= $row["isi"]; ?>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-        <!-- </div> -->
-    <?php endforeach; ?>
+       
 
 <footer class="site-footer bg-light" role="contentinfo">
         <div class="container">

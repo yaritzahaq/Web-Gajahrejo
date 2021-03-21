@@ -6,16 +6,16 @@ require 'functions.php';
 if (isset($_POST["submit"])) {
 
     //cek apakah data berhasil ditambahkan atau tidak
-    if (tambahPengurus($_POST) > 0) {
+    if (tambahProduk($_POST) > 0) {
         echo "
             <script>
-                alert('Berhasil Menambahkan Pengurus');
+                alert('Berhasil Menambahkan Produk');
             </script>
         ";
     } else {
         echo "
             <script>
-                alert('Gagal Menambahkan Pengurus');
+                alert('Gagal Menambahkan Produk');
             </script>
         ";
     }
@@ -38,7 +38,7 @@ if (isset($_POST["submit"])) {
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
-                        <h1 class="pt-5"><span>Form Pengurus desa</span></h1>
+                        <h1 class="pt-5"><span>Form Penambahan Produk Unggulan Desa</span></h1>
                     </div>
                 </div>
             </div>
@@ -48,32 +48,24 @@ if (isset($_POST["submit"])) {
     <section class="section">
         <div class="container">
             <div class="col-12 text-center">
-                <h2>Menambahkan Pengurus Desa</h2>
+                <h2>Menambahkan Produk Unggulan Desa</h2>
             </div>
             <br><br>
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group row font-weight-bold text-uppercase">
                     <label for="nama" class="col-sm-2 col-form-label text-black">nama</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="nama" id="nama" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="Nama" required autocomplete="off">
+                        <input type="text" class="form-control" name="nama" id="nama" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="Judul Potensi" required autocomplete="off">
                     </div>
                 </div>
-                <div class="form-group row font-weight-bold text-uppercase">
-                    <label for="tahun" class="col-sm-2 col-form-label text-black">tahun</label>
+                <div class="form-group row">
+                    <label for="keterangan" class="col-sm-2 col-form-label text-black">keterangan</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="tahun" id="tahun" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="Tahun" required autocomplete="off">
-                    </div>
-                </div>
-                <div class="form-group row font-weight-bold text-uppercase">
-                    <label for="no.sk" class="col-sm-2 col-form-label text-black">no.sk</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name="nosk" id="nosk" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="NO.SK" required autocomplete="off">
-                    </div>
-                </div>
-                <div class="form-group row font-weight-bold text-uppercase">
-                    <label for="jabatan" class="col-sm-2 col-form-label text-black">jabatan</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" name="jabatan" id="jabatan" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="Jabatan" required autocomplete="off">
+                        <!-- <input type="textarea" rows="10" cols="70" class="form-control text-uppercase" name="keterangan" id="keterangan" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="keterangan" required autocomplete="off"> -->
+                        <!-- <textarea name="keterangan" id="keterangan" cols="100" rows="10" style="width: 100%;"></textarea> -->
+
+                        <!-- <div id="summernote">Tulis</div> -->
+                        <textarea name="keterangan" id="summernote" placeholder="Tulis Keterangan Potensi"></textarea>
                     </div>
                 </div>
                 <div class="form-group row font-weight-bold text-uppercase">
@@ -88,6 +80,13 @@ if (isset($_POST["submit"])) {
             </form>
         </div>
     </section>
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Tuliskan Keterangan Produk',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
 </body>
 
 </html>

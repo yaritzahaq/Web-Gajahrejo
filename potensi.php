@@ -3,14 +3,14 @@ require 'functions.php';
 
 $id = $_GET["id"];
 
-$artikel = query("SELECT * FROM artikel WHERE id = $id");
+$potensi = query("SELECT * FROM potensi WHERE id = $id");
 
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Artikel</title>
+    <title>Potensi Desa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:400,700" rel="stylesheet">
@@ -44,17 +44,17 @@ $artikel = query("SELECT * FROM artikel WHERE id = $id");
 <body>
     <div class="background">
         <div class="logo">
-                <h1>BERITA DESA</h1>
+                <h1>POTENSI DESA</h1>
         </div>
     </div>
 
-    <?php foreach ($artikel as $row) : ?>
+    <?php foreach ($potensi as $row) : ?>
         <!-- <div class="backgroundd"> -->
         <div class="container">
             <div class="wrap">
                 <div class="header align-content-stretch">
-                    <h1 class="text-center"><?= $row["judul"]; ?></h1>
-                    <h5 class="text-center">BERITA HARIAN DESA, <?= tgl_indo($row["tanggal"]); ?></h5>
+                    <h1 class="text-center"><?= $row["nama"]; ?></h1>
+                    <h5 class="text-center">POTENSI DESA <?= tgl_indo($row["tanggal"]); ?></h5>
                 </div>
                 <div class="menu text-center">
                     <div class="halo">
@@ -62,7 +62,7 @@ $artikel = query("SELECT * FROM artikel WHERE id = $id");
                     </div>
                 </div>
                 <div class="badan">
-                    <?= $row["isi"]; ?>
+                    <?= $row["keterangan"]; ?>
                 </div>
                 <div class="clear"></div>
             </div>

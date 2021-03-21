@@ -4,6 +4,8 @@ require 'functions.php';
 
 $artikel = query("SELECT * FROM artikel ORDER BY id DESC");
 $wisata = query("SELECT * FROM wisata");
+$potensi = query("SELECT * FROM potensi");
+$produk = query("SELECT * FROM produk");
 
 if (isset($_POST["submit"])) {
 
@@ -97,6 +99,19 @@ $kritik = query("SELECT * FROM kritik ORDER BY id DESC LIMIT 1");
       </div>
     </div>
   </div>
+   <div class="container-fluid">
+      <div class="row no-gutters">
+       <?php foreach ($potensi as $row) : ?>
+        <div class="col-md-4 element-animate">
+          <a href="potensi.php?id=<?= $row["id"] ?>" target="_blank" class="link-thumbnail">
+            <h3><?= $row["nama"] ?></h3>
+            <span class="ion-plus icon"></span>
+            <img src="img/<?= $row["gambar"] ?>" alt="Image" class="img-fluid">
+          </a>
+        </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
   </section>
 
   <section class="section border-t pb-0">
@@ -104,7 +119,7 @@ $kritik = query("SELECT * FROM kritik ORDER BY id DESC LIMIT 1");
       <div class="row justify-content-center mb-5 element-animate">
         <div class="col-md-8 text-center">
           <h2 class=" heading mb-4">WISATA DESA</h2>
-          <p class="mb-5 lead">Tempat wisata desa adalah suatu tempat yang digunakan semua masyarakat Indonesia untuk melakukan kegiatan wisata. Tempat wisata di desa ini berupa tempat wisata alam dan bangunan. Tempat wisata alam dapat berupa pantai, gunung, dan lain-lain, sedangkan tempat wisata bangunan dapat berupa peninggalan sejarah, museum, dan lain-lain.</p>
+          <p class="mb-5 lead">Wisata Desa adalah suatu tempat yang teletak di kawasan Desa Gajahrejo dimana masyarakat baik dari daerah sekitar maupun daerah luas dapat melakukan kegiatan wisata</p>
         </div>
       </div>
     </div>
@@ -144,6 +159,7 @@ $kritik = query("SELECT * FROM kritik ORDER BY id DESC LIMIT 1");
         <div class="col-12 text-center">
           <h2>MONOGRAFI</h2>
           <p class="mb-5 lead">Monografi Desa Gajahrejo menyajikan himpunan data yang dilaksanakan oleh pemerintah desa yang tersusun secara sistematis dan terpadu dalam penyelenggaraan pemerintahan.</p>
+          <a href="monografi.php"><h6>Lihat Monografi</h6></a>
         </div>
       </div>
     </div>
@@ -231,6 +247,19 @@ $kritik = query("SELECT * FROM kritik ORDER BY id DESC LIMIT 1");
       </div>
     </div>
   </div>
+  <div class="container-fluid">
+      <div class="row no-gutters">
+       <?php foreach ($produk as $row) : ?>
+        <div class="col-md-4 element-animate">
+          <a href="produk.php?id=<?= $row["id"] ?>" target="_blank" class="link-thumbnail">
+            <h3><?= $row["nama"] ?></h3>
+            <span class="ion-plus icon"></span>
+            <img src="img/<?= $row["gambar"] ?>" alt="Image" class="img-fluid">
+          </a>
+        </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
   </section>
   <!-- END section -->
 

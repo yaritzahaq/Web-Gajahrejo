@@ -18,7 +18,7 @@ $pengurus = query("SELECT * FROM pengurus");
         .flip-card {
             background-color: transparent;
             width: 250px;
-            height: 400px;
+            height: 250px;
             perspective: 1000px;
             border-radius: 10%;
         }
@@ -49,13 +49,13 @@ $pengurus = query("SELECT * FROM pengurus");
         }
 
         .flip-card-front {
-            background-color: #bbb;
+            background-color: #aef095;
             color: black;
-            border-radius: 10%;
+            border-radius: 5%;
         }
 
         .flip-card-back {
-            background-color: #0cb703;
+            background-color: #aef095;
             color: white;
             border-radius: 10%;
             transform: rotateY(180deg);
@@ -93,87 +93,29 @@ $pengurus = query("SELECT * FROM pengurus");
                                 </div>
                                 <div class="flip-card-back">
                                     <br><br><br><br><br>
-                                    <p><b><?= $row["prodi"] ?></b></p>
-                                    <p><b><?= $row["offering"] ?></b></p>
-                                    <p><b><?= $row["angkatan"] ?></b></p>
+                                    <p><?= $row["nama"] ?></p>
+                                    <p><?= $row["tahun"] ?></p>
+                                    <p><?= $row["jabatan"] ?></p>
                                 </div>
                             </div>
                         </div>
                         <br>
                         <center>
-                            <font color="black" align="center" size="4"><b><?= $row["nama"] ?></b>
+                            <font color="black" align="center" size="3"><i>Nama :   <?= $row["nama"] ?></i>
                                 <hr color="lime" align="center" size="5%">
                             </font>
-                            <font color="black" align="center" size="4"><b><?= $row["jabatan"] ?></b>
+                            <font color="black" align="center" size="3"><i>Tahun :  <?= $row["tahun"] ?></i>
+                                <hr color="lime" align="center" size="5%">
+                            </font>
+                            <font color="black" align="center" size="3"><i>NO.SK :  <?= $row["nosk"] ?></i>
+                                <hr color="lime" align="center" size="5%">
+                            </font>
+                            <font color="black" align="center" size="3"><i>Jabatan :  <?= $row["jabatan"] ?></i>
                                 <hr color="lime" align="center" size="5%">
                             </font>
                         </center>
                     </div>
                 <?php endforeach; ?>
-                <!-- 
-                <div class="col-lg-3">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="images/riza.jpeg" alt="Avatar" style="width:100%; border-radius:10%;">
-                            </div>
-                            <div class="flip-card-back">
-                                <br><br><br><br><br>
-                                <p><b>S1 Teknik Informatika</b></p>
-                                <p><b>Offering C</b></p>
-                                <p><b>Angkatan 2018</b></p>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <center>
-                        <font color="black" align="center" size="4"><b>Riza Maqfiratun Nafisah</b>
-                            <hr color="lime" align="center" size="5%">
-                        </font>
-                    </center>
-                </div>
-                <div class="col-lg-3">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="images/ima.jpeg" alt="Avatar" style="width:100%; border-radius:10%;">
-                            </div>
-                            <div class="flip-card-back">
-                                <br><br><br><br><br>
-                                <p><b>S1 Teknik Informatika</b></p>
-                                <p><b>Offering C</b></p>
-                                <p><b>Angkatan 2018</b></p>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <center>
-                        <font color="black" align="center" size="4"><b>Siti Fatimah</b>
-                            <hr color="lime" align="center" size="5%">
-                        </font>
-                    </center>
-                </div>
-                <div class="col-lg-3">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="images/vishnu.jpeg" alt="Avatar" style="width:100%; border-radius:10%;">
-                            </div>
-                            <div class="flip-card-back">
-                                <br><br><br><br><br>
-                                <p><b>S1 Teknik Informatika</b></p>
-                                <p><b>Offering C</b></p>
-                                <p><b>Angkatan 2018</b></p>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <center>
-                        <font color="black" align="center" size="4"><b>Vishnu Adisaka</b>
-                            <hr color="lime" align="center" size="5%">
-                        </font>
-                    </center>
-                </div> -->
             </div>
         </div>
     </section>

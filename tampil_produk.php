@@ -2,10 +2,10 @@
 
 require 'functions.php';
 
-$pengurus = query("SELECT * FROM pengurus ORDER BY id DESC");
+$potensi = query("SELECT * FROM produk ORDER BY id DESC");
 
 if (isset($_POST["cari"])) {
-    $pengurus = cariPengurus($_POST["keyword"]);
+    $potensi = cariProduk($_POST["keyword"]);
 }
 
 ?>
@@ -25,7 +25,7 @@ if (isset($_POST["cari"])) {
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
-                        <h1 class="pt-5"><span>Daftar Pengurus Desa</span></h1>
+                        <h1 class="pt-5"><span>Daftar Produk Unggulan Desa</span></h1>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@ if (isset($_POST["cari"])) {
         <div class="container">
             <form action="" method="post">
                 <div class="form-group row font-weight-bold text-uppercase">
-                    <h5 class="col-sm-12">Mencari Pengurus Desa</h5>
+                    <h5 class="col-sm-12">Mencari Produk Unggulan Desa</h5>
                     <input type="text" class="col-sm-6" placeholder="Masukkan keyword . . ." name="keyword" id="keyword" autocomplete="off">
                     <button type="submit" class="col-sm-1 btn btn-success" name="cari">Cari</button>
                 </div>
@@ -47,9 +47,7 @@ if (isset($_POST["cari"])) {
                     <tr class="text-center">
                         <th>No</th>
                         <th>Nama</th>
-                        <th>Tahun</th>
-                        <th>No.SK</th>
-                        <th>Jabatan</th>
+                        <th>Keterangan</th>
                         <th>Gambar</th>
                         <th>Hapus</th>
                     </tr>
@@ -57,15 +55,13 @@ if (isset($_POST["cari"])) {
                 <?php $i = 1; ?>
                 <!-- foreach digunakan  pengulangan khusus untuk array -->
                 <tbody>
-                    <?php foreach ($pengurus as $row) : ?>
+                    <?php foreach ($potensi as $row) : ?>
                         <tr>
                             <td><?= $i; ?></td>
                             <td><?= $row["nama"] ?></td>
-                            <td><?= $row["tahun"]; ?></td>
-                            <td><?= $row["nosk"] ?></td>
-                            <td><?= $row["jabatan"]; ?></td>
+                            <td><?= $row["keterangan"] ?></td>
                             <td><img style="max-width: 50px; min-width: 50px; min-height: 50px; max-height: 50px;" src="img/<?= $row["gambar"] ?>" alt="" class="img-fluid"></td>
-                            <td><a href="hapus.php?id=<?= $row["id"]; ?>&hapus=pengurus1" onclick="return confirm('Mau dihapus ?')"><i class="fas fa-trash text-danger fa-2x"></i></a></td>
+                            <td><a href="hapus.php?id=<?= $row["id"]; ?>&hapus=potensi1" onclick="return confirm('Mau dihapus ?')"><i class="fas fa-trash text-danger fa-2x"></i></a></td>
                         </tr>
                         <?php $i++; ?>
                     <?php endforeach; ?>
