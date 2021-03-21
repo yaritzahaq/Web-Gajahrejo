@@ -25,7 +25,7 @@ if (isset($_POST["cari"])) {
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
-                        <h1 class="pt-5"><span>Daftar Info Pelayanan Desa</span></h1>
+                        <h1 class="pt-5"><span>Daftar Profil Desa</span></h1>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@ if (isset($_POST["cari"])) {
         <div class="container">
             <form action="" method="post">
                 <div class="form-group row font-weight-bold text-uppercase">
-                    <h5 class="col-sm-12">Mencari Info Pelayanan Desa</h5>
+                    <h5 class="col-sm-12">Mencari Profil Desa</h5>
                     <input type="text" class="col-sm-6" placeholder="Masukkan keyword . . ." name="keyword" id="keyword" autocomplete="off">
                     <button type="submit" class="col-sm-1 btn btn-success" name="cari">Cari</button>
                 </div>
@@ -46,7 +46,8 @@ if (isset($_POST["cari"])) {
                 <thead class="thead-dark">
                     <tr class="text-center">
                         <th>No</th>
-                        <th>judul</th>
+                        <th>Judul</th>
+                        <th>Profil</th>
                         <th>Hapus</th>
                     </tr>
                 </thead>
@@ -57,6 +58,7 @@ if (isset($_POST["cari"])) {
                         <tr>
                             <td><?= $i; ?></td>
                             <td><?= $row["judul"] ?></td>
+                            <td><?= $row["profil"] ?></td>
                             <td><a href="hapus.php?id=<?= $row["id"]; ?>&hapus=info1" onclick="return confirm('Mau dihapus ?')"><i class="fas fa-trash text-danger fa-2x"></i></a></td>
                         </tr>
                         <?php $i++; ?>

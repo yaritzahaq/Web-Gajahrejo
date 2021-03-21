@@ -115,6 +115,24 @@ if ("lahir" == $ket) {
         </script>
     ";
     }
+} 
+elseif ("produk1" == $ket) {
+    if (hapusProduk($id) > 0) {
+        echo "
+        <script>
+            document.location.href = 'javascript:window.history.go(-1);';
+        </script>
+    ";
+    }
+} 
+elseif ("potensi1" == $ket) {
+    if (hapusPotensi($id) > 0) {
+        echo "
+        <script>
+            document.location.href = 'javascript:window.history.go(-1);';
+        </script>
+    ";
+    }
 } else {
     echo "
         <script>

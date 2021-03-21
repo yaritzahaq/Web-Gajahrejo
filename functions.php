@@ -862,3 +862,30 @@ function cariProduk($keyword)
 
     return query($query);
 }
+function tambahInfo($data)
+{
+    global $conn;
+    // htmlspecialchars digunakan untuk mengubah inputan menjadi string
+    $judul = htmlspecialchars($data["judul"]);
+    $profil = ($data["profil"]);
+   
+    // query sql
+    $query = "INSERT INTO info VALUES ('','$judul','$profil')";
+    mysqli_query($conn, $query);
+    // mengembalikan nilai perubahan data (1 = berhasil) (-1 = gagal)
+    return mysqli_affected_rows($conn);
+}
+
+function hapusInfo($id)
+{
+    global $conn;
+    mysqli_query($conn, "DELETE FROM info WHERE id = $id");
+    return mysqli_affected_rows($conn);
+}
+
+function cariInfo($keyword)
+{
+    $query = "SELECT * FROM info WHERE judul LIKE '%$keyword%'";
+
+    return query($query);
+}

@@ -50,7 +50,7 @@ $info = query("SELECT * FROM info");
                     <div class="col-md-9 col-lg-6 feature-1-wrap d-md-flex flex-md-column order-lg-1">
                         <div class="feature-1 d-md-flex">
                             <div class="align-self-center">
-                                <?= $row["isi"] ?>
+                                <?= $row["profil"] ?>
                             </div>
                         </div>
                     </div>

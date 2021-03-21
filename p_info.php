@@ -38,7 +38,7 @@ if (isset($_POST["submit"])) {
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
-                        <h1 class="pt-5"><span>Form Pembuatan Info Pelayanan desa</span></h1>
+                        <h1 class="pt-5"><span>Form Pembuatan Profil desa</span></h1>
                     </div>
                 </div>
             </div>
@@ -48,22 +48,22 @@ if (isset($_POST["submit"])) {
     <section class="section">
         <div class="container">
             <div class="col-12 text-center">
-                <h2>Membuat Info Desa</h2>
+                <h2>Membuat Profil Desa</h2>
             </div>
             <br><br>
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group row font-weight-bold text-uppercase">
                     <label for="judul" class="col-sm-2 col-form-label text-black">Judul</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="judul" id="judul" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="Judul Kegiatan" required autocomplete="off">
+                        <input type="text" class="form-control" name="judul" id="judul" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="Judul" required autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="isi" class="col-sm-2 col-form-label text-black">Info</label>
+                    <label for="isi" class="col-sm-2 col-form-label text-black">Profil</label>
                     <div class="col-sm-10">
                         <!-- <input type="textarea" rows="10" cols="70" class="form-control" name="isi" id="isi" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="Isi" required autocomplete="off"> -->
                         <!-- <textarea name="isi" id="isi" cols="100" rows="10" style="width: 100%;" placeholder="Syarat Syarat Pelayanan"></textarea> -->
-                        <textarea name="isi" id="summernote" placeholder="Tulis isi Artikel"></textarea>
+                        <textarea name="isi" id="summernote" placeholder="Tulis Profil Desa"></textarea>
                     </div>
                 </div>
                 <div class="row justify-content-center">

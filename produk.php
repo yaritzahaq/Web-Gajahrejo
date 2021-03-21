@@ -29,7 +29,7 @@ $produk = query("SELECT * FROM produk WHERE id = $id");
         .background {
             width: 100%;
             height: 154px;
-            background-image: url(../img/Capture.PNG);
+            background-image: url('images/title.jpg');
             border-bottom: 10px solid black;
         }
 

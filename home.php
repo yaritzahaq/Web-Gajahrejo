@@ -6,6 +6,7 @@ $artikel = query("SELECT * FROM artikel ORDER BY id DESC");
 $wisata = query("SELECT * FROM wisata");
 $potensi = query("SELECT * FROM potensi");
 $produk = query("SELECT * FROM produk");
+$info = query("SELECT * FROM info");
 
 if (isset($_POST["submit"])) {
 
@@ -103,7 +104,7 @@ $kritik = query("SELECT * FROM kritik ORDER BY id DESC LIMIT 1");
       <div class="row no-gutters">
        <?php foreach ($potensi as $row) : ?>
         <div class="col-md-4 element-animate">
-          <a href="potensi.php?id=<?= $row["id"] ?>" target="_blank" class="link-thumbnail">
+          <a href="potensi.php?id=<?= $row["id"] ?>" class="link-thumbnail">
             <h3><?= $row["nama"] ?></h3>
             <span class="ion-plus icon"></span>
             <img src="img/<?= $row["gambar"] ?>" alt="Image" class="img-fluid">
@@ -127,7 +128,7 @@ $kritik = query("SELECT * FROM kritik ORDER BY id DESC LIMIT 1");
       <div class="row no-gutters">
        <?php foreach ($wisata as $row) : ?>
         <div class="col-md-4 element-animate">
-          <a href="<?= $row["link"] ?>" target="_blank" class="link-thumbnail">
+          <a href="<?= $row["link"] ?>" class="link-thumbnail">
             <h3><?= $row["nama"] ?></h3>
             <span class="ion-plus icon"></span>
             <img src="img/<?= $row["gambar"] ?>" alt="Image" class="img-fluid">
@@ -251,7 +252,7 @@ $kritik = query("SELECT * FROM kritik ORDER BY id DESC LIMIT 1");
       <div class="row no-gutters">
        <?php foreach ($produk as $row) : ?>
         <div class="col-md-4 element-animate">
-          <a href="produk.php?id=<?= $row["id"] ?>" target="_blank" class="link-thumbnail">
+          <a href="produk.php?id=<?= $row["id"] ?>" class="link-thumbnail">
             <h3><?= $row["nama"] ?></h3>
             <span class="ion-plus icon"></span>
             <img src="img/<?= $row["gambar"] ?>" alt="Image" class="img-fluid">
@@ -278,7 +279,7 @@ $kritik = query("SELECT * FROM kritik ORDER BY id DESC LIMIT 1");
 
       <div class="row">
         <div class="col-md-offset-2 col-md-12  text-center ">
-          <div id="sendmessage">Kirim pesanmu... Terimakasih</div>
+          <div id="sendmessage">Kirim Pesanmu... Terimakasih</div>
           <br>
           <div class="justify-content-center">
             <form action="" method="post">

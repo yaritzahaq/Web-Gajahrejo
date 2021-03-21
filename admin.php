@@ -61,8 +61,8 @@ if (!isset($_SESSION['session_username'])) {
                             <div class="dropdown-menu" aria-labelledby="dropdown04">
                                 <a class="dropdown-item" href="?halaman=artikel">Buat Artikel</a>
                                 <a class="dropdown-item" href="?halaman=artikel1">Daftar Artikel</a>
-                                <a class="dropdown-item" href="?halaman=info">Buat Info</a>
-                                <a class="dropdown-item" href="?halaman=info1">Daftar Info</a>
+                                <a class="dropdown-item" href="?halaman=info">Buat Profil</a>
+                                <a class="dropdown-item" href="?halaman=info1">Daftar Profil</a>
                                 <a class="dropdown-item" href="?halaman=kegiatan">Buat Kegiatan</a>
                                 <a class="dropdown-item" href="?halaman=kegiatan1">Daftar Kegiatan</a>
                                 <a class="dropdown-item" href="?halaman=wisata">Buat Wisata</a>
