@@ -889,3 +889,39 @@ function cariInfo($keyword)
 
     return query($query);
 }
+
+function tambahKegiatan($data)
+{
+    global $conn;
+    // htmlspecialchars digunakan untuk mengubah inputan menjadi string
+    $judul = htmlspecialchars($data["judul"]);
+    $tanggal = htmlspecialchars($data["tanggal"]);
+    $tempat = htmlspecialchars($data["tempat"]);
+    $isi = ($data["isi"]);
+    
+    // upload gambar
+    $gambar = upload();
+    if (!$gambar) {
+        return false;
+    }
+
+    // query sql
+    $query = "INSERT INTO kegiatan VALUES ('','$judul','$tanggal','$tempat','$isi','$gambar')";
+    mysqli_query($conn, $query);
+    // mengembalikan nilai perubahan data (1 = berhasil) (-1 = gagal)
+    return mysqli_affected_rows($conn);
+}
+
+function hapusKegiatan($id)
+{
+    global $conn;
+    mysqli_query($conn, "DELETE FROM kegiatan WHERE id = $id");
+    return mysqli_affected_rows($conn);
+}
+
+function cariKegiatan($keyword)
+{
+    $query = "SELECT * FROM kegiatan WHERE judul LIKE '%$keyword%'";
+
+    return query($query);
+}

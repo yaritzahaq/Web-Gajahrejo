@@ -71,7 +71,7 @@ if (isset($_POST["submit"])) {
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="isi" class="col-sm-2 col-form-label text-black">ISI</label>
+                    <label for="isi" class="col-sm-2 col-form-label text-black">Isi</label>
                     <div class="col-sm-10">
                         <!-- <input type="textarea" rows="10" cols="70" class="form-control text-uppercase" name="isi" id="isi" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="isi" required autocomplete="off"> -->
                         <textarea name="isi" id="isi" cols="100" rows="10" placeholder="Isi Kegiatan" style="width: 100%;"></textarea>

@@ -9,13 +9,13 @@ if (isset($_POST["submit"])) {
     if (tambahInfo($_POST) > 0) {
         echo "
             <script>
-                alert('Berhasil Membuat Info Pelayanan');
+                alert('Berhasil Membuat Profil Desa');
             </script>
         ";
     } else {
         echo "
             <script>
-                alert('Gagal Membuat Info Pelayanan');
+                alert('Gagal Membuat Profil Desa');
             </script>
         ";
     }
@@ -59,11 +59,11 @@ if (isset($_POST["submit"])) {
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="isi" class="col-sm-2 col-form-label text-black">Profil</label>
+                    <label for="profil" class="col-sm-2 col-form-label text-black">Profil</label>
                     <div class="col-sm-10">
-                        <!-- <input type="textarea" rows="10" cols="70" class="form-control" name="isi" id="isi" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="Isi" required autocomplete="off"> -->
-                        <!-- <textarea name="isi" id="isi" cols="100" rows="10" style="width: 100%;" placeholder="Syarat Syarat Pelayanan"></textarea> -->
-                        <textarea name="isi" id="summernote" placeholder="Tulis Profil Desa"></textarea>
+                        <!-- <input type="textarea" rows="10" cols="70" class="form-control" name="profil" id="profil" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="Profil" required autocomplete="off"> -->
+                        <!-- <textarea name="profil" id="profil" cols="100" rows="10" style="width: 100%;" placeholder="Syarat Syarat Pelayanan"></textarea> -->
+                        <textarea name="profil" id="summernote" placeholder="Tulis Profil Desa"></textarea>
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -74,7 +74,7 @@ if (isset($_POST["submit"])) {
     </section>
     <script>
         $('#summernote').summernote({
-            placeholder: 'Tuliskan isi artikel',
+            placeholder: 'Tuliskan profil desa',
             tabsize: 2,
             height: 100
         });
