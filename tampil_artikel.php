@@ -7,7 +7,6 @@ $artikel = query("SELECT * FROM artikel ORDER BY id DESC");
 if (isset($_POST["cari"])) {
     $artikel = cariPembuatArtikel($_POST["keyword"]);
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +47,7 @@ if (isset($_POST["cari"])) {
                         <th>No</th>
                         <th>Judul Artikel</th>
                         <th>Tanggal Pembuatan </th>
+                        <th style="text-align: center;">Isi</th>
                         <th>Hapus</th>
                         <th>Edit</th>
                     </tr>
@@ -60,8 +60,9 @@ if (isset($_POST["cari"])) {
                             <td><?= $i; ?></td>
                             <td><?= $row["judul"] ?></td>
                             <td><?= tgl_indo($row["tanggal"]); ?></td>
+                            <td><?= $row["isi"] ?></td>
                             <td><a href="hapus.php?id=<?= $row["id"]; ?>&hapus=artikel1" onclick="return confirm('Mau dihapus ?')"><i class="fas fa-trash text-danger fa-2x"></i></a></td>
-                            <td><a id="edit" class="edit ml10 " href="javascript:void(0)" title="Edit" ><i class="glyphicon glyphicon-edit"></i></a></td>
+                            <td><a id="edit" class="edit ml10 " href="?halaman=artikel2" title="edit" ><i class="glyphicon glyphicon-edit"></i></a></td>
                         </tr>
                         <?php $i++; ?>
                     <?php endforeach; ?>
