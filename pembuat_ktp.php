@@ -72,7 +72,7 @@ if (isset($_POST["cari"])) {
                             <td><?= $row["jk"] ?></td>
                             <td><?= $row["tgl_buat"] ?></td>
                             <td><?= $row["tgl_ambil"] ?></td>
-                            <td><a href="cetak_ktp.php?id=<?= $row["id"]; ?>" target="_blank" i class="fas fa-print text-info fa-2x"></i></a></td>
+                            <td><a href="cetak_ktp_asli.php?id=<?= $row["id"]; ?>" target="_blank" i class="fas fa-print text-info fa-2x"></i></a></td>
                             <td><a href="hapus.php?id=<?= $row["id"]; ?>&hapus=ktp" onclick="return confirm('Mau dihapus ?')"><i class="fas fa-trash text-danger fa-2x"></i></a></td>
                         </tr>
                         <?php $i++; ?>

@@ -24,14 +24,14 @@ $html = '
 foreach ($mampu as $row)
     $html .= '
     <table style="text-align: center;" width="100%">
+    
         <tr>
-            <td><h4>PEMERINTAH KABUPATEN MALANG</h4></td>
-        </tr>
-        <tr>
-            <td><h4>PEMERINTAH KECAMATAN TRENGGALEK</h4></td>
-        </tr>
-        <tr>
-            <td><h2>KEPALA DESA AING</h2></td>
+        <td><img style="max-width: 20px; min-width: 20px; min-height: 80px; max-height: 80px;" src="images/logo.PNG"></td>
+            <td><h3 line-height:35x;>PEMERINTAH KABUPATEN MALANG</h3>
+            <h3 line-height:35px;>PEMERINTAH KECAMATAN GEDANGAN</h3>
+            <h3 line-height:35px;>DESA GAJAHREJO</h3>
+            <h5 line-height:35px;>Jl.RayaGajahrejo No 100 KodePos 65178</h5>
+            <h6 line-height:35px;>Website: www.desa gajahrejo.malangkab.go.id</h6></td>
         </tr>
     </table>
     <hr style="height: 4px; color: black">
@@ -40,16 +40,17 @@ foreach ($mampu as $row)
             <td><h4 style="text-decoration: underline">SURAT KETERANGAN TIDAK MAMPU</h4></td>
         </tr>
         <tr>
-            <td> <p>Nomor : 123/SKTM/DAI/VIII/2019</p></td>
+            <td> <p>Nomor :  ...... / ......   / ............... / ...............    </p></td>
         </tr>
     </table>
-    <div class="container" style="text-align: center;">
+    <div class="container" style="text-align: justify;">
        
-    <p>Yang bertanda tangan dibawah ini, Kepala Desa Aing, Kecamatan Trenggalek Kabupaten Malang, dengan ini menerangkan bahwa : </p>
+    <p>Yang bertanda tangan di bawah ini Kepala Desa Gajahrejo Kecamatan Gedangan Kabupaten Malang.</p>
+    <p>Menerangkan  dengan  benar  bahwa : </p>
     <table style="margin-left: 50px;">
         <ol>
             <tr>
-                <td>Nama Lengkap</td>
+                <td>Nama</td>
                 <td>:</td>
                 <td>' . $row["nama"] . '</td>
             </tr>
@@ -69,6 +70,11 @@ foreach ($mampu as $row)
                 <td>' . $row["agama"] . '</td>
             </tr>
             <tr>
+                <td>Status</td>
+                <td>:</td>
+                <td>' . $row["status_perkawinan"] . '</td>
+            </tr>
+            <tr>
                 <td>Pekerjaan</td>
                 <td>:</td>
                 <td>' . $row["pekerjaan"] . '</td>
@@ -81,29 +87,122 @@ foreach ($mampu as $row)
         </ol>
     </table>
 
-    <p style="text-align: justify;"><span style="color: white;">hallo</span>Benar nama yang tercantum adalah warga Desa Aing Kecamatan Trenggalek Kabupaten Malang. Dengan ini sepengetahuan kami dan sesuai data yang ada di kantor Desa orang tersebut diatas benar keluarga kurang mampu <span style="font-weight: bold; font-style: italic;">( KELUARGA BERPENGHASILAN RENDAH )</span>. Dan Surat Keterangan ini diberikan untuk ' . $row["keperluan"] . '.</p><br>
+    <p style="text-align: justify;"><span style="color: white;">hallo</span>Bahwa orang  tersebut diatas benar-benar warga Desa Gajahrejo asli,dan setelah kami amati dan kami telusuri keberadaan orang tersebut  tergolong orang yang tarap keberadaannya sekarang ini tergolong orang yang  miskin  ( tidak mampu ).</p>
 
-    <p style="text-align: justify;"><span style="color: white;">hallo</span>Demikian Surat keterangan ini dibuat dengan sebenarnya untuk yang bersangkutan dan kiranya dapat dipergunakan seperlunya.</p>
+    <p style="text-align: justify;"><span style="color: white;">hallo</span>Surat keterangan ini atas permintaan yang bersangkutan akan di gunakan sebagai persyaratan  :  ' . $row["keperluan"] . '.</p>
+
+    <p style="text-align: justify;"><span style="color: white;">hallo</span>Demikian surat keterangan ini kami buat dengan benar dan atas kerja samanya  kami ucapkan banyak terima kasih.</p>
 
     <br>
     <table width=100%>
         <tr>
             <td width= 50%; style="padding-left: 100px;">Mengetahui :</td>
-            <td align="right" style="padding-right: 100px;">Aing' . tgl_indo(date("Y-m-d")) . ' </td>
+            <td align="right" style="padding-right: 100px;">Gajahrejo, ' . tgl_indo(date("Y-m-d")) . ' </td>
         </tr>
     </table>
     <table width=100%>
         <tr>
-            <td width= 50%; style="padding-left: 100px; font-weight: bold;">CAMAT TRENGGALEK </td>
-            <td align="right" style="padding-right: 100px; font-weight: bold;">KEPALA DESA AING </td>
+            <td width= 50%; style="padding-left: 100px;">CAMAT GEDANGAN </td>
+            <td align="right" style="padding-right: 100px;">KEPALA DESA GAJAHREJO </td>
         </tr>
     </table><br><br><br><br>
     <table width=100%>
         <tr>
-            <td width= 50%; style="padding-left: 100px;">( RIAN ARI SASONO )</td>
-            <td align="right" style="padding-right: 100px;">( VISHNU ADISAKA )</td>
+            <td width= 50%; style="padding-left: 100px;">( ................... )</td>
+            <td align="right" style="padding-right: 100px;"><b><u>SISWOYO</b></u></td>
         </tr>
     </table>
+<br><br><br><br><br><br><br><br><br>
+    <table style="text-align: center;" width="100%">
+    
+        <tr>
+        <td><img style="max-width: 20px; min-width: 20px; min-height: 80px; max-height: 80px;" src="images/logo.PNG"></td>
+            <td><h3 line-height:35x;>PEMERINTAH KABUPATEN MALANG</h3>
+            <h3 line-height:35px;>PEMERINTAH KECAMATAN GEDANGAN</h3>
+            <h3 line-height:35px;>DESA GAJAHREJO</h3>
+            <h5 line-height:35px;>Jl.RayaGajahrejo No 100 KodePos 65178</h5>
+            <h6 line-height:35px;>Website: www.desa gajahrejo.malangkab.go.id</h6></td>
+        </tr>
+    </table>
+    <hr style="height: 4px; color: black">
+    <table style="text-align: center;" width="100%">
+        <tr>
+            <td><h4 style="text-decoration: underline">SURAT KETERANGAN TIDAK MAMPU</h4></td>
+        </tr>
+        <tr>
+            <td> <p>Nomor :  ...... / ......   / ............... / ...............    </p></td>
+        </tr>
+    </table>
+    <div class="container" style="text-align: justify;">
+       
+    <p>Yang bertanda tangan di bawah ini Sekretaris Desa Gajahrejo Kecamatan Gedangan Kabupaten Malang.</p>
+    <p>Menerangkan  dengan  benar  bahwa : </p>
+    <table style="margin-left: 50px;">
+        <ol>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td>' . $row["nama"] . '</td>
+            </tr>
+            <tr>
+                <td>Tempat / Tanggal Lahir</td>
+                <td>:</td>
+                <td>' . $row["tempat_lahir"] . ", " . tgl_indo($row["tanggal_lahir"]) . '</td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>:</td>
+                <td>' . $row["jenis_kelamin"] . '</td>
+            </tr>
+            <tr>
+                <td>Agama</td>
+                <td>:</td>
+                <td>' . $row["agama"] . '</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>:</td>
+                <td>' . $row["status_perkawinan"] . '</td>
+            </tr>
+            <tr>
+                <td>Pekerjaan</td>
+                <td>:</td>
+                <td>' . $row["pekerjaan"] . '</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td>' . "RT " . $row["rt"] . " RW " . $row["rw"] . " " . $row["desa"] . ", " . $row["kecamatan"] . ", " . $row["kabupaten"] . '</td>
+            </tr>
+        </ol>
+    </table>
+
+    <p style="text-align: justify;"><span style="color: white;">hallo</span>Bahwa orang  tersebut diatas benar-benar warga Desa Gajahrejo asli,dan setelah kami amati dan kami telusuri keberadaan orang tersebut  tergolong orang yang tarap keberadaannya sekarang ini tergolong orang yang  miskin  ( tidak mampu ).</p>
+
+    <p style="text-align: justify;"><span style="color: white;">hallo</span>Surat keterangan ini atas permintaan yang bersangkutan akan di gunakan sebagai persyaratan  :  ' . $row["keperluan"] . '.</p>
+
+    <p style="text-align: justify;"><span style="color: white;">hallo</span>Demikian surat keterangan ini kami buat dengan benar dan atas kerja samanya  kami ucapkan banyak terima kasih.</p>
+
+    <br>
+    <table width=100%>
+        <tr>
+ 
+            <td align="right" style="padding-right: 100px;">Gajahrejo, ' . tgl_indo(date("Y-m-d")) . ' </td>
+        </tr>
+    </table>
+    <table width=100%>
+        <tr>
+            <td width= 50%; style="padding-left: 100px;">Yang Bersangkutan</td>
+            <td align="right" style="padding-right: 100px;">An. Kepala Desa Gajahrejo</td>
+        </tr>
+    </table><br><br><br><br>
+    <table width=100%>
+        <tr>
+            <td width= 50%; style="padding-left: 100px;"><b><u>' . $row["nama"] . '</b></u></td>
+            <td align="right" style="padding-right: 100px;"><b><u>SISWOYO</b></u></td>
+        </tr>
+    </table>
+
 </body>
 </html> 
 ';

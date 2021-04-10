@@ -204,6 +204,8 @@ function tambahKematian($data)
     $nik_lapor = ucfirst(htmlspecialchars($data["nik_lapor"]));
     $umur_lapor = ucfirst(htmlspecialchars($data["umur_lapor"]));
     $pekerjaan_lapor = ucfirst(htmlspecialchars($data["pekerjaan_lapor"]));
+    $no_kk = ucfirst(htmlspecialchars($data["no_kk"]));
+    $jk_lapor = ucfirst(htmlspecialchars($data["jk_lapor"]));
     $rt_lapor = ucfirst(htmlspecialchars($data["rt_lapor"]));
     $rw_lapor = ucfirst(htmlspecialchars($data["rw_lapor"]));
     $desa_lapor = strtoupper(htmlspecialchars($data["desa_lapor"]));
@@ -226,6 +228,7 @@ function tambahKematian($data)
     $bertempat = ucfirst(htmlspecialchars($data["bertempat"]));
     $penyebab = ucfirst(htmlspecialchars($data["penyebab"]));
     $bukti = ucfirst(htmlspecialchars($data["bukti"]));
+    $kk_mati = ucfirst(htmlspecialchars($data["kk_mati"]));
 
     $hari_ini = date('Y-m-d');
     $satu_hari = mktime(0, 0, 0, date("n"), date("j") + 1, date("Y"));
@@ -244,7 +247,7 @@ function tambahKematian($data)
     $query = "INSERT INTO mati VALUES ('','$nama_lapor','$nik_lapor','$umur_lapor','$pekerjaan_lapor','$rt_lapor','$rw_lapor','$desa_lapor','$kec_lapor','$kab_lapor',
     '$hub',
     '$nama_mati','$nik_mati','$jk_mati','$tgl_mati','$agama','$rt_mati','$rw_mati','$desa_mati','$kec_mati','$kab_mati',
-    '$hari','$tgl_kematian','$pukul','$bertempat','$penyebab','$bukti','$hari_ini','$pengambilan')";
+    '$hari','$tgl_kematian','$pukul','$bertempat','$penyebab','$bukti','$hari_ini','$pengambilan','$kk_mati','$jk_lapor','$no_kk')";
     mysqli_query($conn, $query);
     // mengembalikan nilai perubahan data (1 = berhasil) (-1 = gagal)
     return mysqli_affected_rows($conn);
@@ -290,7 +293,7 @@ function tambahSkck($data)
     $kecamatan = ucfirst(htmlspecialchars($data["kecamatan"]));
     $kabupaten = ucfirst(htmlspecialchars($data["kabupaten"]));
     $keperluan = ucfirst(htmlspecialchars($data["keperluan"]));
-    $keterangan = ucfirst(htmlspecialchars($data["keterangan"]));
+    $kewarganegaraan = ucfirst(htmlspecialchars($data["kewarganegaraan"]));
 
     $mulai = date('Y-m-d');
     $sebulan = mktime(0, 0, 0, date("n"), date("j") + 30, date("Y"));
@@ -310,7 +313,7 @@ function tambahSkck($data)
         $pengambilan        = date("Y-m-d", $satu_hari);
     }
     // query sql
-    $query = "INSERT INTO skck VALUES ('','$nama','$jenis_kelamin','$agama','$status','$nik','$tempat_lahir','$tgl_lahir','$pekerjaan','$rt','$rw','$desa','$kecamatan','$kabupaten','$keperluan','$keterangan','$mulai','$selesai','$hari_ini','$pengambilan')";
+    $query = "INSERT INTO skck VALUES ('','$nama','$jenis_kelamin','$agama','$status','$nik','$tempat_lahir','$tgl_lahir','$pekerjaan','$rt','$rw','$desa','$kecamatan','$kabupaten','$keperluan','$kewarganegaraan','$mulai','$selesai','$hari_ini','$pengambilan')";
     mysqli_query($conn, $query);
     // mengembalikan nilai perubahan data (1 = berhasil) (-1 = gagal)
     return mysqli_affected_rows($conn);
@@ -345,7 +348,7 @@ function tambahUsaha($data)
     $nama = ucfirst(htmlspecialchars($data["nama"]));
     $tempat_lahir = ucfirst(htmlspecialchars($data["tempat_lahir"]));
     $tgl_lahir = ucfirst(htmlspecialchars($data["tgl_lahir"]));
-    $nik = ucfirst(htmlspecialchars($data["nik"]));
+    $ktp = ucfirst(htmlspecialchars($data["ktp"]));
     $jenis_kelamin = ucfirst(htmlspecialchars($data["jenis_kelamin"]));
     $agama = ucfirst(htmlspecialchars($data["agama"]));
     $pekerjaan = ucfirst(htmlspecialchars($data["pekerjaan"]));
@@ -355,8 +358,12 @@ function tambahUsaha($data)
     $kecamatan = ucfirst(htmlspecialchars($data["kecamatan"]));
     $kabupaten = ucfirst(htmlspecialchars($data["kabupaten"]));
     $jenis_usaha = ucfirst(htmlspecialchars($data["jenis_usaha"]));
-    $nama_usaha = ucfirst(htmlspecialchars($data["nama_usaha"]));
+    $tempat_usaha = ucfirst(htmlspecialchars($data["tempat_usaha"]));
     $keperluan = ucfirst(htmlspecialchars($data["keperluan"]));
+    $status = ucfirst(htmlspecialchars($data["status"]));
+    $kewarganegaraan = ucfirst(htmlspecialchars($data["kewarganegaraan"]));
+    $tahun = ucfirst(htmlspecialchars($data["tahun"]));
+    $pemasaran = ucfirst(htmlspecialchars($data["pemasaran"]));
 
     $hari_ini = date('Y-m-d');
     $satu_hari = mktime(0, 0, 0, date("n"), date("j") + 1, date("Y"));
@@ -372,7 +379,7 @@ function tambahUsaha($data)
         $pengambilan        = date("Y-m-d", $satu_hari);
     }
     // query sql
-    $query = "INSERT INTO usaha VALUES ('','$nama','$tempat_lahir','$tgl_lahir','$nik','$jenis_kelamin','$agama','$pekerjaan','$rt','$rw','$desa','$kecamatan','$kabupaten','$jenis_usaha','$nama_usaha','$keperluan','$hari_ini','$pengambilan')";
+    $query = "INSERT INTO usaha VALUES ('','$nama','$tempat_lahir','$tgl_lahir','$nik','$jenis_kelamin','$agama','$pekerjaan','$rt','$rw','$desa','$kecamatan','$kabupaten','$jenis_usaha','$tempat_usaha','$keperluan','$hari_ini','$pengambilan','$status','$kewarganegaraan','$tahun','$pemasaran')";
     mysqli_query($conn, $query);
     // mengembalikan nilai perubahan data (1 = berhasil) (-1 = gagal)
     return mysqli_affected_rows($conn);
@@ -610,6 +617,20 @@ function cariPembuatArtikel($keyword)
     return query($query);
 }
 
+function editArtikel($id)
+{
+    $id = $_POST["id"];
+    $hari_ini = $_POST["tanggal"];
+    $judul = $_POST["judul"];
+    $isi = $_POST["isi"];
+    $gambar = $_POST["gambar"];
+
+    // query sql
+    $query = "UPDATE artikel SET judul='$judul', isi='$isi', tanggal='$hari_ini', gambar='$gambar' where id='$id'";
+    $hasil=mysqli_query($conn, $query);
+    
+    header("location: admin.php?halaman=artikel1");
+  }
 
 // function untuk menambahkan data Usaha
 function tambahKk($data)

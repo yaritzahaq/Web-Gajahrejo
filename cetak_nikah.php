@@ -24,14 +24,14 @@ $html = '
 foreach ($nikah as $row)
     $html .= '
     <table style="text-align: center;" width="100%">
+    
         <tr>
-            <td><h4>PEMERINTAH KABUPATEN MALANG</h4></td>
-        </tr>
-        <tr>
-            <td><h4>PEMERINTAH KECAMATAN TRENGGALEK</h4></td>
-        </tr>
-        <tr>
-            <td><h2>KEPALA DESA AING</h2></td>
+        <td><img style="max-width: 20px; min-width: 20px; min-height: 80px; max-height: 80px;" src="images/logo.PNG"></td>
+            <td><h3 line-height:35x;>PEMERINTAH KABUPATEN MALANG</h3>
+            <h3 line-height:35px;>PEMERINTAH KECAMATAN GEDANGAN</h3>
+            <h3 line-height:35px;>DESA GAJAHREJO</h3>
+            <h5 line-height:35px;>Jl.RayaGajahrejo No 100 KodePos 65178</h5>
+            <h6 line-height:35px;>Website: www.desa gajahrejo.malangkab.go.id</h6></td>
         </tr>
     </table>
     <hr style="height: 4px; color: black">
@@ -40,14 +40,14 @@ foreach ($nikah as $row)
             <td><h4 style="text-decoration: underline">SURAT KETERANGAN BELUM MENIKAH</h4></td>
         </tr>
         <tr>
-            <td> <p>Nomor : 123/SKBM/VIII/2019</p></td>
+            <td> <p>Nomor :  ...... / ......   / ............... / ...............    </p></td>
         </tr>
     </table>
     <div class="container" style="text-align: center;">
        
       
     </div>
-    <p style="text-align: justify;">Yang bertanda tangan dibawah ini, Kepala Desa Aing, Kecamatan Trenggalek Kabupaten Malang, dengan ini menerangkan bahwa : </p>
+    <p style="text-align: justify;">Yang bertanda tangan dibawah ini, Kepala Desa Gajahrejo, Kecamatan Gedangan, Kabupaten Malang, dengan ini menerangkan bahwa : </p>
     <table style="margin-left: 50px;">
         <ol>
             <tr>
@@ -87,7 +87,7 @@ foreach ($nikah as $row)
             </tr>
         </ol>
     </table>
-    <p style="text-align: justify;">Dengan ini menerangkan bahwa orang tersebut diatas memang benar-benar penduduk Desa Aing Kecamatan Trenggalek Kabupaten Malang dan benar bahwa belum pernah menikah.</p>
+    <p style="text-align: justify;">Dengan ini menerangkan bahwa orang tersebut diatas memang benar-benar penduduk Desa Gajahrejo Kecamatan Gedangan Kabupaten Malang dan benar bahwa belum pernah menikah.</p>
     
     <p style="text-align: justify;">Surat Keterangan ini dipergunakan untuk ' . $row["keperluan"] . '.</p>
 
@@ -96,19 +96,19 @@ foreach ($nikah as $row)
     <table width=100%>
         <tr>
             <td width= 50%; style="padding-left: 100px;"></td>
-            <td align="right" style="padding-right: 100px; text-align: right;">Aing' . tgl_indo(date("Y-m-d")) . ' </td>
+            <td align="right" style="padding-right: 100px; text-align: right;">Gajahrejo, ' . tgl_indo(date("Y-m-d")) . ' </td>
         </tr>
     </table>
     <table width=100%>
         <tr>
             <td width= 50%; ></td>
-            <td align="right" style="padding-right: 100px;">Kepala Desa Aing </td>
+            <td align="right" style="padding-right: 100px;">Kepala Desa Gajahrejo </td>
         </tr>
     </table><br><br><br><br>
     <table width=100%>
         <tr>
             <td width= 50%;></td>
-            <td align="right" style="padding-right: 100px;">( Vishnu Adisaka )</td>
+            <td align="right" style="padding-right: 100px;">( .............. )</td>
         </tr>
     </table>
 </body>

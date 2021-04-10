@@ -134,6 +134,12 @@ if (isset($_POST["submit"])) {
                     </div>
                 </div>
                 <div class="form-group row font-weight-bold text-uppercase">
+                    <label for="alamat" class="col-sm-2 col-form-label text-black">alamat</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control text-uppercase" name="alamat" id="alamat" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="alamat" required autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group row font-weight-bold text-uppercase">
                     <label for="rt" class="col-sm-2 col-form-label text-black">RT</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control text-uppercase" name="rt" id="rt" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="rt" required autocomplete="off">
@@ -155,6 +161,24 @@ if (isset($_POST["submit"])) {
                     <label for="kecamatan" class="col-sm-2 col-form-label text-black">kecamatan</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control text-uppercase" name="kecamatan" id="kecamatan" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="kecamatan" required autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group row font-weight-bold text-uppercase">
+                    <label for="kabupaten" class="col-sm-2 col-form-label text-black">kabupaten</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control text-uppercase" name="kabupaten" id="kabupaten" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="kabupaten" required autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group row font-weight-bold text-uppercase">
+                    <label for="propinsi" class="col-sm-2 col-form-label text-black">propinsi</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control text-uppercase" name="propinsi" id="propinsi" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="propinsi" required autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group row font-weight-bold text-uppercase">
+                    <label for="keperluan" class="col-sm-2 col-form-label text-black">keperluan</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control text-uppercase" name="keperluan" id="keperluan" oninvalid="this.setCustomValidity('data tidak boleh kosong')" oninput="setCustomValidity('')" placeholder="keperluan" required autocomplete="off">
                     </div>
                 </div>
                 <div class="row justify-content-center">

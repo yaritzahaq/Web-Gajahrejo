@@ -174,9 +174,9 @@ $html .= '
 foreach ($kk as $row) :
     $html .= '
         <tr>
-            <td width= 25%; style="padding: 50px 0 0 20px;">Vishnu Adisaka </td>
-            <td width= 25%; style="padding: 50px 0 0 0px;">Siti Fatimah</td>
-            <td width= 25%; style="padding: 50px 0 0 0px;">Riza Maqfiratun</td>
+            <td width= 25%; style="padding: 50px 0 0 20px;">...................  </td>
+            <td width= 25%; style="padding: 50px 0 0 0px;">....................  </td>
+            <td width= 25%; style="padding: 50px 0 0 0px;">....................  </td>
             <td width= 25%; style="padding: 50px 0 0 0px;">' . $row["nama_kepala"] . '</td>
         </tr>
     </table>

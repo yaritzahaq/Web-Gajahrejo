@@ -1,6 +1,7 @@
 <?php
 
 // load 
+
 require 'functions.php';
 
 if (isset($_POST["submit"])) {

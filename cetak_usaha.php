@@ -24,14 +24,14 @@ $html = '
 foreach ($usaha as $row)
     $html .= '
     <table style="text-align: center;" width="100%">
+    
         <tr>
-            <td><h4>PEMERINTAH KABUPATEN MALANG</h4></td>
-        </tr>
-        <tr>
-            <td><h4>PEMERINTAH KECAMATAN GEDANGAN</h4></td>
-        </tr>
-        <tr>
-            <td><h2>KEPALA DESA GAJAHREJO</h2></td>
+        <td><img style="max-width: 20px; min-width: 20px; min-height: 80px; max-height: 80px;" src="images/logo.PNG"></td>
+            <td><h3 line-height:35x;>PEMERINTAH KABUPATEN MALANG</h3>
+            <h3 line-height:35px;>PEMERINTAH KECAMATAN GEDANGAN</h3>
+            <h3 line-height:35px;>DESA GAJAHREJO</h3>
+            <h5 line-height:35px;>Jl.RayaGajahrejo No 100 KodePos 65178</h5>
+            <h6 line-height:35px;>Website: www.desa gajahrejo.malangkab.go.id</h6></td>
         </tr>
     </table>
     <hr style="height: 4px; color: black">
@@ -40,16 +40,32 @@ foreach ($usaha as $row)
             <td><h4 style="text-decoration: underline">SURAT KETERANGAN USAHA</h4></td>
         </tr>
         <tr>
-            <td> <p>Nomor : 123/SKU/II/2019</p></td>
+            <td> <p>Nomor :  ...... / ......   / ............... / ...............    </p></td>
         </tr>
     </table>
     <div class="container" style="text-align: center;">
        
-    <p style="text-align: justify;">Yang bertanda tangan dibawah ini, Kepala Desa Gajahrejo, Kecamatan Gedangan Kabupaten Malang, dengan ini menerangkan bahwa : </p>
+    <p style="text-align: justify;">Yang bertanda tangan dibawah ini :</p>
     <table style="margin-left: 50px;">
         <ol>
             <tr>
-                <td>Nama Lengkap</td>
+                <td>Nama</td>
+                <td>:</td>
+                <td><b>SUJIONO</b></td>
+            </tr>
+            <tr>
+                <td>JABATAN</td>
+                <td>:</td>
+                <td><b>KASI KESEJAHTERAAN DESA GAJAHREJO</b></td>
+            </tr>
+    </ol>
+    </table>
+    <br>
+    <p style="text-align: justify;">Setelah melihat dan memeriksa menerangkan dengan sebenarnya bahwa :</p>
+    <table style="margin-left: 50px;">
+        <ol>
+            <tr>
+                <td>Nama</td>
                 <td>:</td>
                 <td>' . $row["nama"] . '</td>
             </tr>
@@ -59,19 +75,14 @@ foreach ($usaha as $row)
                 <td>' . $row["tempat_lahir"] . ", " . tgl_indo($row["tgl_lahir"]) . '</td>
             </tr>
             <tr>
-                <td>No KTP/NIK</td>
+                <td>No KTP</td>
                 <td>:</td>
-                <td>' . $row["nik"] . '</td>
+                <td>' . $row["ktp"] . '</td>
             </tr>
             <tr>
                 <td>Jenis Kelamin</td>
                 <td>:</td>
                 <td>' . $row["jenis_kelamin"] . '</td>
-            </tr>
-            <tr>
-                <td>Agama</td>
-                <td>:</td>
-                <td>' . $row["agama"] . '</td>
             </tr>
             <tr>
                 <td>Pekerjaan</td>
@@ -83,39 +94,69 @@ foreach ($usaha as $row)
                 <td>:</td>
                 <td>' . "RT " . $row["rt"] . " RW " . $row["rw"] . " " . $row["desa"] . ", " . $row["kecamatan"] . ", " . $row["kabupaten"] . '</td>
             </tr>
+            <tr>
+                <td>Agama</td>
+                <td>:</td>
+                <td>' . $row["agama"] . '</td>
+            </tr>
+            <tr>
+                <td>Status Perkawinan</td>
+                <td>:</td>
+                <td>' . $row["status"] . '</td>
+            </tr>
+            <tr>
+                <td>Kewarganegaraan</td>
+                <td>:</td>
+                <td>'  . $row["kewarganegaraan"] . '</td>
+            </tr>
         </ol>
     </table>
-    <p style="text-align: justify;">adalah benar benar penduduk yang berdomisili di Desa ' . $row["desa"] . ', Kecamatan ' . $row["kecamatan"] . ', Kabupaten ' . $row["kabupaten"] . '.</p>
-    
-    <p style="text-align: justify;">Berdasarkan pengamatan yang telah kami lakukan memang benar yang bersangkutan mempunyai usaha ' . $row["jenis_usaha"] . ' dengan nama ' . $row["nama_usaha"] . ' di wilayah Desa Gajahrejo.</p>
+    <p style="text-align: justify;">Bahwa orang tersebut diatas benar-benar penduduk  : Desa ' . $row["desa"] . ' dan memiliki usaha di Desa ' . $row["desa"] . ', Kec. '. $row["kecamatan"] . '</p>
 
-    <p style="text-align: justify;">Adapun Surat Keterangan Usaha ini dibuat guna ' . $row["keperluan"] . ' .</p>
-
-    <p style="text-align: justify;">Demikian Surat Keterangan Usaha ini kami keluarkan untuk dapat dipergunakan sebagaimana mestinya dan bagi instansi yang berkepentingan menjadi bahan perikasa adanya.</p>
+    <table>
+    <ol>
+    <tr>
+                <td>Memiliki Usaha</td>
+                <td>:</td>
+                <td>' . $row["jenis_usaha"] . '</td>
+            </tr>
+            <tr>
+                <td>Tempat Usaha</td>
+                <td>:</td>
+                <td>'  . $row["kewarganegaraan"] . '</td>
+            </tr>
+            <tr>
+                <td>Pemasaran</td>
+                <td>:</td>
+                <td>' . $row["status"] . '</td>
+            </tr>
+            <tr>
+                <td>Berdiri Sejak</td>
+                <td>:</td>
+                <td>'  . $row["kewarganegaraan"] . '</td>
+            </tr>
+    </ol>
+    </table>
     
-    <table>
+
+    <p style="text-align: justify;">Demikian surat keterangan usaha ini di buat dengan sebenar-benarnya untuk ' . $row["keperluan"] . ' .</p>
+
+     <table width=100%>
         <tr>
-            <td>Dikeluarkan di</td>
-            <td>:</td>
-            <td>Gajahrejo</td>
+            <td width= 50%; style="padding-left: 100px;"></td>
+            <td align="right" style="padding-right: 100px;">Gajahrejo, ' . tgl_indo(date("Y-m-d")) . ' </td>
         </tr>
+    </table>
+    <table width=100%>
         <tr>
-            <td>Pada tanggal</td>
-            <td>:</td>
-            <td>' . tgl_indo(date("Y-m-d")) . ' </td>
+            <td width= 50%; style="padding-left: 100px;">Pemilik Usaha</td>
+            <td align="right" style="padding-right: 100px; ">Kepala Desa Gajahrejo</td>
         </tr>
-    </table><br>
-    <table>
+    </table><br><br><br><br>
+    <table width=100%>
         <tr>
-            <td>Kepala Desa Gajahrejo</td>
-        </tr>
-        <tr>
-            <td>Kecamatan Gedangan, Malang</td>
-        </tr>
-    </table><br><br><br>
-    <table>
-        <tr>
-            <td><p>Siswoyo</p></td>
+            <td width= 50%; style="padding-left: 100px; font-weight: bold;"><u>' . $row["nama"] . ' </u></td>
+            <td align="right" style="padding-right: 100px; font-weight: bold;"><u>Siswoyo</u></td>
         </tr>
     </table>
 </body>

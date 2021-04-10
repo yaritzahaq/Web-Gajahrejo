@@ -49,7 +49,8 @@ if (isset($_POST["cari"])) {
                         <th>No Bukti</th>
                         <th>Nama</th>
                         <th>Tempat tanggal lahir</th>
-                        <th>pekerjaan</th>
+                        <th>Pekerjaan</th>
+                        <th>Status</th>
                         <th>Tanggal Pembuatan</th>
                         <th>Tanggal Pengambilan</th>
                         <th>Cetak Surat</th>
@@ -66,6 +67,7 @@ if (isset($_POST["cari"])) {
                             <td><?= $row["nama"] ?></td>
                             <td><?= $row["tempat_lahir"] ?> , <?= $row["tgl_lahir"] ?></td>
                             <td><?= $row["pekerjaan"] ?></td>
+                            <td><?= $row["status_perkawinan"] ?></td>
                             <td><?= $row["tgl_buat"] ?></td>
                             <td><?= $row["tgl_ambil"] ?></td>
                             <td><a href="cetak_mampu.php?id=<?= $row["id"]; ?>" target="_blank" i class="fas fa-print text-info fa-2x"></i></a></td>

@@ -50,6 +50,7 @@ if (isset($_POST["cari"])) {
                         <th>Keterangan</th>
                         <th>Gambar</th>
                         <th>Hapus</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 <?php $i = 1; ?>
@@ -62,6 +63,7 @@ if (isset($_POST["cari"])) {
                             <td><?= $row["keterangan"] ?></td>
                             <td><img style="max-width: 50px; min-width: 50px; min-height: 50px; max-height: 50px;" src="img/<?= $row["gambar"] ?>" alt="" class="img-fluid"></td>
                             <td><a href="hapus.php?id=<?= $row["id"]; ?>&hapus=potensi1" onclick="return confirm('Mau dihapus ?')"><i class="fas fa-trash text-danger fa-2x"></i></a></td>
+                            <td><a id="edit" class="edit ml10 " href="edit_produk.php?id=<?= $row["id"]; ?>" title="edit" ><i class="glyphicon glyphicon-edit"></i></a></td>
                         </tr>
                         <?php $i++; ?>
                     <?php endforeach; ?>

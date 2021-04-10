@@ -62,7 +62,7 @@ if (isset($_POST["cari"])) {
                             <td><?= tgl_indo($row["tanggal"]); ?></td>
                             <td><?= $row["isi"] ?></td>
                             <td><a href="hapus.php?id=<?= $row["id"]; ?>&hapus=artikel1" onclick="return confirm('Mau dihapus ?')"><i class="fas fa-trash text-danger fa-2x"></i></a></td>
-                            <td><a id="edit" class="edit ml10 " href="?halaman=artikel2" title="edit" ><i class="glyphicon glyphicon-edit"></i></a></td>
+                            <td><a id="edit" class="edit ml10 " href="edit_artikel.php?id=<?= $row["id"]; ?>" title="edit" ><i class="glyphicon glyphicon-edit"></i></a></td>
                         </tr>
                         <?php $i++; ?>
                     <?php endforeach; ?>

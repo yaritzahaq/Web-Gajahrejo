@@ -24,49 +24,26 @@ $html = '
 foreach ($skck as $row)
     $html .= '
     <table style="text-align: center;" width="100%">
+    
         <tr>
-            <td><h4>PEMERINTAH KABUPATEN MALANG</h4></td>
-        </tr>
-        <tr>
-            <td><h4>PEMERINTAH KECAMATAN GEDANGAN</h4></td>
-        </tr>
-        <tr>
-            <td><h2>KEPALA DESA GAJAHREJO</h2></td>
+        <td><img style="max-width: 20px; min-width: 20px; min-height: 80px; max-height: 80px;" src="images/logo.PNG"></td>
+            <td><h3 line-height:35x;>PEMERINTAH KABUPATEN MALANG</h3>
+            <h3 line-height:35px;>PEMERINTAH KECAMATAN GEDANGAN</h3>
+            <h3 line-height:35px;>DESA GAJAHREJO</h3>
+            <h5 line-height:35px;>Jl.RayaGajahrejo No 100 KodePos 65178</h5>
+            <h6 line-height:35px;>Website: www.desa gajahrejo.malangkab.go.id</h6></td>
         </tr>
     </table>
     <hr style="height: 4px; color: black">
     <table style="text-align: center;" width="100%">
         <tr>
-            <td><h4 style="text-decoration: underline">SURAT PENGANTAR MOHON SKCK</h4></td>
+            <td><h4 style="text-decoration: underline">SURAT PENGANTAR PERMOHONAN KETERANGAN CATATAN KEPOLISIAN</h4></td>
         </tr>
         <tr>
-            <td> <p>Nomor : 123/SPMK/IX/2019</p></td>
+            <td> <p>Nomor :  ...... / ......   / ............... / ...............    </p></td>
         </tr>
     </table>
-    <p>Yang Bertanda tangan dibawah ini :</p>
-    <table>
-    <ol>
-        <tr>
-            <td style="color: white"><li></li></td>
-            <td>Nama Lengkap</td>
-            <td>:</td>
-            <td>SISWOYO</td>
-        </tr>
-        <tr>
-            <td style="color: white"><li></li></td>
-            <td>Jabatan</td>
-            <td>:</td>
-            <td>Kepala Desa Gajahrejo</td>
-        </tr>
-        <tr>
-            <td style="color: white"><li></li></td>
-            <td>Alamat</td>
-            <td>:</td>
-            <td>RT    / RW     Desa Gajahrejo, Kec. Gedangan</td>
-        </tr>
-    </ol>
-</table>
-    <p>Dengan ini menerangkan bahwa :</p>
+    <p>Yang bertanda tangan dibawah ini, Kepala Desa Gajahrejo Kecamatan Gedangan kabupaten Malang , dengan ini menyertakan bahwa :</p>
     <table>
         <ol>
             <tr>
@@ -83,27 +60,27 @@ foreach ($skck as $row)
             </tr>
             <tr>
                 <td style="color: white"><li></li></td>
-                <td>Agama</td>
+                <td>Tempat / Tanggal Lahir</td>
                 <td>:</td>
-                <td>' . $row["agama"] . '</td>
+                <td>' . $row["tempat_lahir"] . ", " . tgl_indo($row["tgl_lahir"]) . '</td>
             </tr>
             <tr>
                 <td style="color: white"><li></li></td>
-                <td>Status</td>
+                <td>Status Perkawinan</td>
                 <td>:</td>
                 <td>' . $row["status"] . '</td>
             </tr>
             <tr>
                 <td style="color: white"><li></li></td>
-                <td>No KTP/NIK</td>
+                <td>Kewarganegaraan</td>
                 <td>:</td>
-                <td>' . $row["nik"] . '</td>
+                <td>' . $row["kewarganegaraan"] . '</td>
             </tr>
             <tr>
                 <td style="color: white"><li></li></td>
-                <td>Tempat / Tanggal Lahir</td>
+                <td>Agama</td>
                 <td>:</td>
-                <td>' . $row["tempat_lahir"] . ", " . tgl_indo($row["tgl_lahir"]) . '</td>
+                <td>' . $row["agama"] . '</td>
             </tr>
             <tr>
                 <td style="color: white"><li></li></td>
@@ -112,6 +89,11 @@ foreach ($skck as $row)
                 <td>' . $row["pekerjaan"] . '</td>
             </tr>
             <tr>
+                <td style="color: white"><li></li></td>
+                <td>No KTP/NIK</td>
+                <td>:</td>
+                <td>' . $row["nik"] . '</td>
+            </tr>            <tr>
                 <td style="color: white"><li></li></td>
                 <td>Alamat</td>
                 <td>:</td>
@@ -125,54 +107,31 @@ foreach ($skck as $row)
             </tr>
             <tr>
                 <td style="color: white"><li></li></td>
-                <td>Keterangan lain-lain</td>
-                <td>:</td>
-                <td>' . $row["keterangan"] . '</td>
-            </tr>
-            <tr>
-                <td style="color: white"><li></li></td>
                 <td>Berlaku mulai tanggal</td>
                 <td>:</td>
                 <td>' . tgl_indo($row["mulai"]) . " s/d " . tgl_indo($row["selesai"]) . '</td>
             </tr>
         </ol>
     </table>
-    <p>Demikian Surat Keterangan ini dibuat untuk digunakan seperlunya.</p>
+     <p style="text-align: justify;"><span style="color: white;">hallo</span><b><u>Keterangan :</u></b>Setelah kami telusuri bahwa orang tersebut keberadaannya benar-benar orang  Desa Gajahrejo Kecamatan Gedangan Kabupaten Malang asli. Serta kami menerangkan bahwa orang tersebut benar berkelakuan baik dan belum pernah tersangkut perkara Polisi. Surat keterangan ini atas dasar permintaan yang bersangkutan dan akan di pergunakan untuk ' . $row["keperluan"] . '.</p>
+    <p style="text-align: justify;"><span style="color: white;">hallo</span>Demikian surat keterangan pengantar ini kami buat dengan sebenarnya dan dapat dipergunakan sebagaimana mestinya.</p><br>
     <br>
     <table width=100%>
         <tr>
             <td width= 50%; style="padding-left: 100px;"></td>
-            <td align="right" style="padding-right: 100px;">' . tgl_indo(date("Y-m-d")) . ' </td>
+            <td align="right" style="padding-right: 100px;">Gajahrejo, ' . tgl_indo(date("Y-m-d")) . ' </td>
         </tr>
     </table>
     <table width=100%>
         <tr>
-            <td width= 50%; style="padding-left: 100px;">Tanda tangan Pemegang</td>
-            <td align="right" style="padding-right: 100px; ">Kepala Desa Gajahrejo </td>
+            <td width= 50%; style="padding-left: 100px;">Yang Bersangkutan</td>
+            <td align="right" style="padding-right: 100px; ">An.Kepala Desa Gajahrejo</td>
         </tr>
     </table><br><br><br><br>
     <table width=100%>
         <tr>
-            <td width= 50%; style="padding-left: 100px; font-weight: bold;">(' . $row["nama"] . ' )</td>
-            <td align="right" style="padding-right: 70px; font-weight: bold;">( Siswoyo)</td>
-        </tr>
-    </table>
-    <table width=100%>
-        <tr>
-            <td width= 45%; style="padding-left: 100px;"></td>
-            <td align="left" style="padding-right: 70px; ">Mengetahui :</td>
-        </tr>
-    </table>
-    <table width=100%>
-        <tr>
-            <td width= 50%; style="padding-left: 100px;">Danramil Gajahrejo</td>
-            <td align="right" style="padding-right: 70px;">Camat Gedangan</td>
-        </tr>
-    </table><br><br><br><br>
-    <table width=100%>
-        <tr>
-            <td width= 50%; style="padding-left: 100px;font-weight: bold;">( .................... )</td>
-            <td align="right" style="padding-right: 50px; font-weight: bold;">( RIAN ARI SASONO )</td>
+            <td width= 50%; style="padding-left: 100px; font-weight: bold;"><u>' . $row["nama"] . ' </u></td>
+            <td align="right" style="padding-right: 100px; font-weight: bold;"><u>Siswoyo</u></td>
         </tr>
     </table>
 </body>

@@ -49,6 +49,7 @@ if (isset($_POST["cari"])) {
                         <th>Judul</th>
                         <th>Profil</th>
                         <th>Hapus</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 <?php $i = 1; ?>
@@ -59,7 +60,9 @@ if (isset($_POST["cari"])) {
                             <td><?= $i; ?></td>
                             <td><?= $row["judul"] ?></td>
                             <td><?= $row["profil"] ?></td>
-                            <td><a href="hapus.php?id=<?= $row["id"]; ?>&hapus=info1" onclick="return confirm('Mau dihapus ?')"><i class="fas fa-trash text-danger fa-2x"></i></a></td>
+                            <td><a href="hapus.php?id=<?= $row["id"]; ?>&hapus=info1" onclick="return confirm('Mau dihapus ?')"><i class="fas fa-trash text-danger fa-2x">
+                                <td><a id="edit" class="edit ml10 " href="edit_info.php?id=<?= $row["id"]; ?>" title="edit" ><i class="glyphicon glyphicon-edit"></i></a></td>
+                            </i></a></td>
                         </tr>
                         <?php $i++; ?>
                     <?php endforeach; ?>

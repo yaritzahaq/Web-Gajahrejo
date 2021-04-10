@@ -16,12 +16,12 @@ $html = '
             <tr>
                 <td>Pemerintah Desa/Kelurahan</td>
                 <td>:</td>
-                <td>Aing</td>
+                <td>Gajahrejo</td>
             </tr>
             <tr>
                 <td>Kecamatan</td>
                 <td>:</td>
-                <td>Trenggalek</td>
+                <td>Gedangan</td>
             </tr>
             <tr>
                 <td>Kabupaten/Kota</td>
@@ -31,7 +31,7 @@ $html = '
             <tr>
                 <td>Kode Wilayah</td>
                 <td>:</td>
-                <td>1234567890</td>
+                <td>............</td>
             </tr>
         </table>
     </div>
@@ -295,7 +295,7 @@ $html2 = '
     <table width=100%>
         <tr>
             <td width= 50%; style="padding-left: 100px;"></td>
-            <td align="right" style="padding-right: 100px;">' . "Aing, " . tgl_indo(date("Y-m-d")) . ' </td>
+            <td align="right" style="padding-right: 100px;">' . "Gajahrejo, " . tgl_indo(date("Y-m-d")) . ' </td>
         </tr>
     </table>
     <table width=100%>
@@ -306,8 +306,130 @@ $html2 = '
     </table><br><br><br><br>
     <table width=100%>
         <tr>
-            <td width= 50%; style="padding-left: 100px;">( Vishnu Adisaka )</td>
+            <td width= 50%; style="padding-left: 100px;">( ............................. )</td>
             <td align="right" style="padding-right: 70px;">(' . $row["nama_lapor"] . ' )</td>
+        </tr>
+    </table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="container" style="text-align: center;">
+        <h3>SURAT PERNYATAAN</h3>
+    </div>
+    <div class="container">
+        <table>
+
+            <tr>
+            
+                <td>Nama</td>
+                <td>:</td>
+                <td>'. $row["nama_lapor"] .'</td>
+            </tr>
+            <tr>
+            
+                <td>NIK</td>
+                <td>:</td>
+                <td>' . $row["nik_lapor"] . '</td>
+            </tr>
+                            <tr>
+                    
+                    <td>Nomor KK</td>
+                    <td>:</td>
+                    <td>' . $row["no_kk"] . '</td>
+                </tr>
+                <tr>
+                  
+                    <td>Jenis kelamin</td>
+                    <td>:</td>
+                    <td>' . $row["jk_lapor"] . '</td>
+                </tr>
+                <tr>
+                  
+                    <td>Pekerjaan</td>
+                    <td>:</td>
+                    <td>' . $row["pekerjaan_lapor"] . '</td>
+                </tr>
+                <tr>
+                 
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td>' . "Desa/kelurahan :" . $row["desa_lapor"] . '</td>
+                    <td>' . "Kab/kota       :" . $row["kab_lapor"] . '</td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td></td>
+                    <td>' . "Kecamatan :" . $row["kec_lapor"] . '</td>
+                    <td>' . "Provinsi  :" . $row["prov_lapor"] . '</td>
+                </tr>
+                
+        </table>
+    </div>
+    <p style="text-align: justify;"><span style="color: white;">hallo</span>Menyatakan dengan sebenarnya bahwa data-data dalam berkas yang saya lampirkan untuk pengurusan penerbitan akta kelahiran</p>
+            <table>
+            
+                <tr>
+                    
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td>' . $row["nama_anak"] . '</td>
+                </tr>
+                <tr>
+                    <td>Tempat/Tanggal Lahir</td>
+                    <td>:</td>
+                    <td>' . $row["tempat_lahir"] . ' / ' . $row["hari"] . ", " . tgl_indo($row["tgl_lahir"]) . '</td>
+                </tr>
+                 <tr>
+                    <td>Kelahiran ke</td>
+                    <td>:</td>
+                    <td>' . $row["ke"] . '</td>
+                </tr>
+                                <tr>
+                    <td>Nama Ayah</td>
+                    <td>:</td>
+                    <td>' . $row["nama_ayah"] .  '</td>
+                </tr>
+                <tr>
+                    <td>Nama Ibu</td>
+                    <td>:</td>
+                    <td>' . $row["nama_ibu"] .  '</td>
+                </tr>
+                <tr>
+                 
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td>' . "Desa/kelurahan :" . $row["desa_ibu"] . '</td>
+                    <td>' . "Kab/kota       :" . $row["kab_ibu"] . '</td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td></td>
+                    <td>' . "Kecamatan :" . $row["kec_ibu"] . '</td>
+                    <td>' . "Provinsi  :" . $row["prov_ibu"] . '</td>
+                </tr>
+        </table>
+        <p style="text-align: justify;"><span style="color: white;">hallo</span>Adalah benar dan dapat dipertanggung jawabkan.</p>
+        <p style="text-align: justify;"><span style="color: white;">hallo</span>Surat pernyataan ini saya buat dengan sebenar-benarnya dan apabila pernyataan saya tidak benar saya bersedia dikenakan sanksi pidana sebagaimana ditentukan dalam pasal 93 Undang-Undang Nomor 23 Tahun 2006 tentang Administrasi Kependudukan bahwa “Setiap Penduduk  yang  dengan  sengaja  memalsukan  surat  dan/ atau  dokumen  kepada Instansi pelaksana   dalam  melaporkan  Peristiwa, Kependudukan  dan  peristiwa  penting  dipidana dengan   pidana   penjara  paling  lama  6  ( enem )  tahun  dan/ atau  denda  paling  banyak  Rp. 50.000.000,00  (  lima  puluh  juta  rupiah  )” dan  dokumen  yang diterbitkan akibat dari pernyataan ini menjadi  tidak  sah.</p>
+        </div><br><br><br><br>
+    <table width=100%>
+        <tr>
+            <td width= 50%; style="padding-left: 100px;"></td>
+            <td align="right" style="padding-right: 100px;">' . "Malang, " . tgl_indo(date("Y-m-d")) . ' </td>
+        </tr>
+    </table>
+    <table width=100%>
+        <tr>
+            <td align="right" style="padding-right: 100px;">Yang membuat pernyataan</td>
+        </tr>
+    </table><br><br>
+    <table width=100%>
+        <tr>
+            <td align="right" style="padding-right: 100px;">materai 6000</td>
+        </tr>
+    </table><br><br>
+    <table width=100%>
+        <tr>
+            <td align="right" style="padding-right: 100px;">' . $row["nama_lapor"] . ' </td>
         </tr>
     </table>
 
